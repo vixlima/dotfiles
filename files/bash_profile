@@ -1,11 +1,6 @@
-# Path
-export PATH="/bin:/sbin:/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/X11/bin:$HOME/.rbenv/bin"
-export CDPATH=.:~:~/Projects:~/Projects/labs:~/Projects/works
-
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
-source `brew --prefix`/etc/bash_completion.d/git-completion.bash
-source `brew --prefix`/etc/bash_completion.d/git-prompt.sh
+# PATH
+export PATH="/bin:/sbin:/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/X11/bin"
+export CDPATH=.:~:~/Projects:~/Projects/labs:~/Projects/works:~/Projects/personal
 
 source $HOME/.bash/scripts/export.sh
 source $HOME/.bash/scripts/alias.sh

@@ -19,8 +19,8 @@
 	sb = status -sb
 	dw = diff --word-diff
 [core]
-	editor = mate -wl1
-	excludesfile = /Users/andrelima/.gitignore
+	editor = subl -w
+	excludesfile = ~/.gitignore
 [help]
 	autocorrect = 1
 [branch]

@@ -1,4 +1,4 @@
-# Auto Colors
+# Auto colors
 export GREP_OPTIONS="--color=auto"
 export GREP_COLOR="4;33"
 export CLICOLOR="auto"
@@ -13,7 +13,7 @@ export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[00;32m'
 
 # Editor
-export EDITOR="$HOME/bin/mate -w"
+export EDITOR="$HOME/bin/subl -w"
 
 # History
 export HISTCONTROL=ignoreboth
@@ -21,6 +21,3 @@ export HISTFILESIZE=1000000
 export HISTIGNORE="&"
 export HISTSIZE=${HISTFILESIZE}
 export CDHISTORY="/tmp/cd-${USER}"
-
-# Java
-export JAVA_HOME="/Library/Java/Home"

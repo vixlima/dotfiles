@@ -1,4 +1,4 @@
-Pry.config.editor = "mate -w"
+Pry.config.editor = ENV.fetch("EDITOR", "subl -w")
 
 Pry.config.prompt = proc do |obj, level, _|
   prompt = ""
@@ -19,8 +19,16 @@ if defined?(Rails)
 end
 
 begin
-  require "awesome_print"
-  Pry.config.print = proc {|output, value| Pry::Helpers::BaseHelpers.stagger_output("=> #{value.ai}", output)}
-rescue LoadError => err
-   warn "=> Unable to load awesome_print"
+  require "pry-meta"
+
+  Pry.config.print = proc do |output, value|
+    Pry::Helpers::BaseHelpers
+      .stagger_output("=> #{value.ai}", output)
+  end
+
+  Pry.commands.alias_command "c", "continue"
+  Pry.commands.alias_command "s", "step"
+  Pry.commands.alias_command "n", "next"
+rescue LoadError => error
+  warn "=> Unable to load pry-meta"
 end

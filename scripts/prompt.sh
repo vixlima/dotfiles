@@ -25,7 +25,7 @@ __vixlima_prompt () {
     BRANCH=" $BRANCH"
   fi
 
-  local RUBY_VERSION=`rbenv version | sed -e 's/ .*//'`
+  local RUBY_VERSION=`ruby -e "puts RUBY_VERSION"`
 
   if [ -f Gemfile.lock ]; then
     local RAILS_VERSION=`cat Gemfile.lock | grep -E " +rails \([0-9]+" | sed 's/ *rails (\(.*\))/\1/'`
